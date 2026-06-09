@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>お支払い方法のご案内 ｜ 伊佐義史 応援プロジェクト</title>
+<meta name="robots" content="noindex" />
+<style>
+  :root{
+    --accent:#e4002b;--accent-dark:#b30022;--ink:#1a1a1a;--muted:#666;
+    --bg:#fafafa;--card:#ffffff;--line:#ececec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  img{max-width:100%;display:block}
+
+  .top{background:linear-gradient(160deg,#fff 0%,#fff5f6 100%);text-align:center;
+    padding:44px 20px 36px;border-bottom:1px solid var(--line)}
+  .top .check{font-size:46px;margin-bottom:10px}
+  .top h1{font-size:22px;line-height:1.5;margin-bottom:10px}
+  .top p{color:var(--muted);font-size:14.5px}
+
+  section{padding:34px 0}
+  h2{font-size:20px;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  h2::before{content:"";width:5px;height:22px;background:var(--accent);border-radius:3px}
+
+  .pay-method{border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px;background:#fff}
+  .pay-method h3{font-size:17px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .pay-method .ic{width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+  .qr{max-width:240px;margin:8px auto 4px;border:1px solid var(--line);border-radius:12px}
+  .bank-info{background:#f7f7f7;border-radius:10px;padding:14px 16px;font-size:14.5px}
+  .bank-info dt{color:var(--muted);font-size:12px;margin-top:8px}
+  .bank-info dt:first-child{margin-top:0}
+  .bank-info dd{font-weight:700;margin-bottom:2px}
+
+  .note{background:#fff8e1;border:1px solid #ffe08a;border-radius:12px;padding:16px 18px;
+    font-size:14px;margin-top:8px}
+  .back{display:block;text-align:center;color:var(--muted);font-size:14px;text-decoration:none;
+    padding:20px;border-top:1px solid var(--line)}
+  footer{text-align:center;padding:30px 20px 44px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="check">🙏</div>
+    <h1>ご記入ありがとうございます！</h1>
+    <p>続けて、下のいずれかの方法でお支払いをお願いします。<br><strong>一口1,000円〜・上限なし</strong></p>
+  </header>
+
+  <div class="wrap">
+
+    <section>
+      <h2>お支払い方法</h2>
+
+      <!-- PayPay -->
+      <div class="pay-method">
+        <h3><span class="ic">P</span>PayPayで送る</h3>
+        <p style="font-size:14px;color:var(--muted);margin-bottom:6px">下のQRコードを読み取って送金してください。</p>
+        <!-- ▼▼▼ ④ PayPayの「受け取りQRコード」画像を paypay-qr.png としてこのフォルダに置く ▼▼▼ -->
+        <img class="qr" src="paypay-qr.png" alt="PayPay QRコード"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'" />
+        <p style="display:none;font-size:13px;color:var(--accent);text-align:center">
+          （ここにPayPay受け取りQR画像「paypay-qr.png」を置いてください）
+        </p>
+        <!-- ▲▲▲ ④ここまで ▲▲▲ -->
+      </div>
+
+      <!-- 銀行振込 -->
+      <div class="pay-method">
+        <h3><span class="ic">¥</span>銀行振込</h3>
+        <!-- ▼▼▼ ⑤ 口座情報を書き換えてください ▼▼▼ -->
+        <dl class="bank-info">
+          <dt>銀行名</dt><dd>○○銀行</dd>
+          <dt>支店名</dt><dd>○○支店（店番 ○○○）</dd>
+          <dt>種別・口座番号</dt><dd>普通 0000000</dd>
+          <dt>口座名義</dt><dd>○○ ○○（カナ名義）</dd>
+        </dl>
+        <!-- ▲▲▲ ⑤ここまで ▲▲▲ -->
+        <p style="font-size:13px;color:var(--muted);margin-top:10px;margin-bottom:0">
+          ※ お振込名義がわかりにくい場合は、応援フォームにご記入のお名前と合わせてご連絡ください。
+        </p>
+      </div>
+
+      <div class="note">
+        温かいご支援、誠にありがとうございます。返礼品（ステッカー5種＋クリアファイル）は、後日 本人が直接お届けいたします 🎁
+      </div>
+    </section>
+
+  </div>
+
+  <a class="back" href="index.html">← トップページに戻る</a>
+
+  <footer>
+    お問い合わせ：後援会 研修員代表 堀川晋太朗<br>
+    horikshint@open.ed.jp
+  </footer>
+
+</body>
+</html>

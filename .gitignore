@@ -1,0 +1,5 @@
+# 公開しないもの
+*.docx
+_original/
+.claude/
+.DS_Store

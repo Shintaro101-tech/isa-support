@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ▼▼▼ ① ページタイトル（ブラウザのタブやLINE共有時に出る文字）▼▼▼ -->
+<title>伊佐義史 応援プロジェクト ｜ ラート世界選手権2026</title>
+<meta property="og:title" content="ラート日本代表男子キャプテン 伊佐義史を応援しよう！" />
+<meta property="og:description" content="ラート世界選手権2026（ドイツ・ゲッティンゲン）へ。遠征費の応援をお願いします。" />
+<meta property="og:image" content="banner.png" />
+<meta property="og:type" content="website" />
+<!-- ▲▲▲ ①ここまで ▲▲▲ -->
+<style>
+  :root{
+    --accent:#e4002b;      /* メインカラー（日の丸の赤）。好みで変更可 */
+    --accent-dark:#b30022;
+    --ink:#1a1a1a;
+    --muted:#666;
+    --bg:#fafafa;
+    --card:#ffffff;
+    --line:#ececec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  img{max-width:100%;display:block}
+
+  /* ===== ヒーロー（バナー）===== */
+  .hero-banner{background:#0a2a5e;text-align:center;border-bottom:3px solid var(--accent)}
+  .hero-banner img{width:100%;max-width:720px;margin:0 auto}
+  .hero-banner .lead{color:#fff;background:#0a2a5e;font-size:14px;padding:14px 16px;margin:0}
+
+  /* ===== ヒーロー（旧・テキスト版／未使用）===== */
+  .hero{
+    background:linear-gradient(160deg,#fff 0%,#fff5f6 100%);
+    text-align:center;padding:56px 20px 44px;border-bottom:1px solid var(--line);
+  }
+  .hero .badge{
+    display:inline-block;background:var(--accent);color:#fff;font-size:13px;
+    font-weight:700;letter-spacing:.08em;padding:6px 14px;border-radius:999px;margin-bottom:20px;
+  }
+  .hero h1{font-size:28px;line-height:1.5;margin-bottom:14px;letter-spacing:.01em}
+  .hero p.lead{color:var(--muted);font-size:15px}
+
+  /* ===== セクション共通 ===== */
+  section{padding:40px 0}
+  h2{font-size:20px;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  h2::before{content:"";width:5px;height:22px;background:var(--accent);border-radius:3px}
+  p{margin-bottom:14px;font-size:15.5px}
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px;margin-bottom:16px;
+  }
+
+  /* ===== 動画（解禁演出）===== */
+  .video-area{text-align:center}
+  .locked{
+    background:#111;color:#fff;border-radius:16px;padding:44px 20px;
+  }
+  .locked .lock-emoji{font-size:42px;margin-bottom:10px}
+  .locked p{color:#ddd;font-size:14px;margin-bottom:22px}
+  .btn{
+    display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+    font-weight:700;font-size:16px;padding:15px 34px;border-radius:999px;border:none;
+    cursor:pointer;transition:transform .08s ease,background .2s ease;
+  }
+  .btn:hover{background:var(--accent-dark)}
+  .btn:active{transform:scale(.97)}
+  .btn-block{display:block;width:100%;text-align:center}
+  .video-embed{position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;display:none}
+  .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .reveal-note{font-size:13px;color:var(--muted);margin-top:14px;display:none}
+  .video-list{list-style:none;text-align:left;margin:0 0 18px}
+  .video-list li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);
+    border-radius:10px;padding:12px 14px;margin-bottom:10px;font-size:14px}
+  .video-list li span{font-size:13px;color:var(--muted)}
+  .video-caption{font-size:13.5px;color:var(--ink);font-weight:700;text-align:center;
+    margin-top:14px;background:#f2f4f8;border-radius:8px;padding:10px 12px}
+
+  /* ===== 支払い ===== */
+  .pay-method{border:1px solid var(--line);border-radius:14px;padding:20px;margin-bottom:14px;background:#fff}
+  .pay-method h3{font-size:17px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .pay-method .ic{
+    width:30px;height:30px;border-radius:8px;background:var(--accent);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0;
+  }
+  .qr{max-width:220px;margin:8px auto 4px;border:1px solid var(--line);border-radius:12px}
+  .bank-info{background:#f7f7f7;border-radius:10px;padding:14px 16px;font-size:14.5px}
+  .bank-info dt{color:var(--muted);font-size:12px;margin-top:8px}
+  .bank-info dt:first-child{margin-top:0}
+  .bank-info dd{font-weight:700;margin-bottom:2px}
+  .copy-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .mini{font-size:12px;color:var(--accent);background:none;border:1px solid var(--accent);
+    border-radius:6px;padding:2px 8px;cursor:pointer}
+
+  /* ===== 返礼品 ===== */
+  .gift{display:flex;gap:14px;align-items:flex-start}
+  .gift .emoji{font-size:32px;flex-shrink:0}
+
+  /* ===== ステップ ===== */
+  ol.steps{list-style:none;counter-reset:s}
+  ol.steps li{counter-increment:s;position:relative;padding:10px 0 10px 44px;font-size:15px}
+  ol.steps li::before{
+    content:counter(s);position:absolute;left:0;top:8px;width:28px;height:28px;
+    background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;
+    justify-content:center;font-size:14px;font-weight:700;
+  }
+
+  footer{text-align:center;padding:36px 20px 48px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+
+  .highlight{background:linear-gradient(transparent 60%,#ffe1e6 60%);font-weight:700}
+
+  /* 返礼品ヒーロー */
+  .gift-hero{
+    text-align:center;background:linear-gradient(160deg,#fff 0%,#fff5f6 100%);
+    border:1px solid #ffd9df;border-radius:18px;padding:26px 20px;margin-bottom:18px;
+  }
+  .gift-emoji{font-size:40px;display:block;margin-bottom:8px}
+  .gift-title{font-size:19px;font-weight:700;line-height:1.6;margin-bottom:6px}
+  .gift-title strong{color:var(--accent)}
+  .gift-sub{font-size:14px;color:var(--muted);margin-bottom:0}
+  /* ステッカーギャラリー */
+  .sticker-lead{text-align:center;font-weight:700;color:var(--accent);font-size:15px;margin-bottom:14px}
+  .sticker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+  .sticker-grid img{
+    width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px;
+    border:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.06);
+    background:#fff;transition:transform .15s;
+  }
+  .sticker-grid img:hover{transform:translateY(-3px) scale(1.02)}
+  .sticker-grid img:nth-child(4){grid-column:1/2}
+  /* デザイナークレジット */
+  .credit-card{
+    display:flex;align-items:flex-start;gap:12px;background:#0a2a5e;color:#fff;
+    border-radius:14px;padding:18px 20px;
+  }
+  .credit-ic{font-size:24px;flex-shrink:0}
+  .credit-name{font-weight:700;font-size:15px;margin-bottom:4px}
+  .credit-name strong{color:#ffd24a}
+  .credit-note{font-size:13px;color:#cdd8ea;margin-bottom:0}
+
+  /* 写真 */
+  .photo{width:100%;border-radius:16px;margin:6px 0 18px;border:1px solid var(--line)}
+  .photo-cap{font-size:12px;color:var(--muted);text-align:center;margin:-10px 0 18px}
+  /* 外部リンクボタン（白地） */
+  .btn-outline{
+    display:flex;align-items:center;gap:10px;background:#fff;color:var(--ink);text-decoration:none;
+    border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;
+    font-weight:700;font-size:15px;transition:border-color .2s,transform .08s;
+  }
+  .btn-outline:hover{border-color:var(--accent)}
+  .btn-outline:active{transform:scale(.99)}
+  .btn-outline .yt{color:#ff0000;font-size:20px}
+  .btn-outline .arrow{margin-left:auto;color:var(--muted)}
+</style>
+</head>
+<body>
+
+  <!-- ===== ヒーロー（バナー画像）===== -->
+  <header class="hero-banner">
+    <img src="banner.png" alt="ラート日本代表男子キャプテン 伊佐義史を応援しよう！" />
+    <p class="lead">ラート世界選手権2026 出場・遠征 応援プロジェクト</p>
+  </header>
+
+  <div class="wrap">
+
+    <!-- ===== ストーリー ===== -->
+    <section>
+      <h2>ごあいさつ</h2>
+      <p>私、<span class="highlight">伊佐義史（いさ よしふみ）</span>は、2025年 全日本ラート競技選手権大会において個人総合<strong>3位</strong>に入賞し、ラート日本代表選手に選出されました。</p>
+      <p>自身<strong>5回目</strong>の世界大会となる今大会では、前回に引き続き<span class="highlight">男子キャプテン</span>という大任を拝命し、日本代表としての誇りを胸に世界の舞台へ臨みます。</p>
+      <p>しかしながら、海外遠征における渡航費・滞在費などは自己負担が大きいのが現状です。万全の体制で大会に臨み、これまでの練習の成果を存分に発揮するため、皆さまからの温かいご支援を賜りたく、資金造成のお願いを申し上げます。</p>
+      <p>お預かりした支援金は、大会出場に関わる諸経費に充てさせていただきます。皆さまのご期待に添えるよう全力で演技してまいります。何卒、格別のご支援を賜りますようお願い申し上げます。</p>
+    </section>
+
+    <!-- ===== 大会・遠征概要 ===== -->
+    <section>
+      <h2>大会・遠征概要</h2>
+      <div class="card">
+        <dl class="bank-info" style="background:transparent;padding:0">
+          <dt>大会名</dt><dd>WHEEL GYMNASTICS WORLD CHAMPIONSHIPS 2026<br>（ラート世界選手権大会 2026）</dd>
+          <dt>日程</dt><dd>2026年6月28日〜7月5日</dd>
+          <dt>開催地</dt><dd>ドイツ・ゲッティンゲン</dd>
+          <dt>伊佐選手の出番</dt><dd>シニア予選 ｜ 日本時間 7月1日(水) 深夜頃</dd>
+          <dt>ライブ配信</dt><dd>YouTubeチャンネル「BTV Rhoenrad」にて配信予定 📺</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== 動画（伊佐選手を知ってもらう紹介）===== -->
+    <section class="video-area">
+      <h2>伊佐選手の演技を見る</h2>
+      <p style="text-align:left">まずは伊佐選手のラートをご覧ください。下のボタンを押すと、次の<strong>2本のうちどちらか1本がランダム</strong>で再生されます 🎲</p>
+      <ul class="video-list">
+        <li><strong>World Championships 2022（Men Spiral Finals）</strong><br><span>世界選手権2022 スパイラル決勝 ｜ <strong style="color:var(--accent)">5位入賞</strong></span></li>
+        <li><strong>World Championships 2024（Men Semi Finals）</strong><br><span>世界選手権2024 準決勝 ｜ <strong style="color:var(--accent)">11位</strong></span></li>
+      </ul>
+
+      <div id="lockedBox" class="locked">
+        <div class="lock-emoji">🤸</div>
+        <p>ボタンを押して<br>伊佐選手の演技をチェック！</p>
+        <button class="btn" onclick="unlockVideo()">▶ 演技を見る</button>
+      </div>
+
+      <!-- 表示される動画（ランダムで1本）。動画は下の <script> の videos 配列で管理 -->
+      <div id="videoEmbed" class="video-embed">
+        <iframe id="ytFrame"
+                title="演技動画" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <p id="videoCaption" class="video-caption" style="display:none"></p>
+      <button id="rerollBtn" class="btn" style="display:none;margin-top:16px;background:#333"
+              onclick="pickVideo()">🎲 別の演技も見る</button>
+      <p id="revealNote" class="reveal-note">気に入っていただけたら、ぜひ応援をお願いします 🙏</p>
+    </section>
+
+    <!-- ===== 応援の流れ ===== -->
+    <section>
+      <h2>応援の流れ</h2>
+      <ol class="steps">
+        <li>まず<strong>応援フォーム</strong>に記入（お名前・返礼品の受け取り方法など）</li>
+        <li>送信後の画面に出る<strong>「支払いはこちら」</strong>から支払い（<strong>一口1,000円〜・上限なし</strong>）</li>
+        <li>後日、本人が返礼品を直接お届けします 🎁</li>
+      </ol>
+    </section>
+
+    <!-- PayPay QR・銀行振込の情報は、フォーム送信後に表示する pay.html に移動しました -->
+
+    <!-- ===== 現金で直接渡したい方へ ===== -->
+    <section>
+      <div class="card" style="background:#fff8e1;border-color:#ffe08a">
+        <h3 style="font-size:17px;margin-bottom:10px;display:flex;align-items:center;gap:8px">
+          <span style="font-size:20px">💵</span>現金で直接お渡ししたい方へ
+        </h3>
+        <p style="margin-bottom:8px;font-size:14.5px">現金で応援したい方は、<strong>教科研修班に直接お越しください</strong>。その場でお預かりします。</p>
+        <p style="margin-bottom:0;font-size:14.5px"><strong>※ 直接お渡しいただく場合は、応援フォームの記入は不要です。</strong></p>
+      </div>
+    </section>
+
+    <!-- ===== 返礼品 ===== -->
+    <section>
+      <h2>返礼品</h2>
+      <div class="gift-hero">
+        <span class="gift-emoji">🎁</span>
+        <p class="gift-title">オリジナルステッカー <strong>5種セット</strong><br>＋ クリアファイル <strong>5枚</strong></p>
+        <p class="gift-sub">本人が直接お届けし、お礼を申し上げます</p>
+      </div>
+
+      <p class="sticker-lead">＼ 大会公式デザインの限定ステッカー5種 ／</p>
+      <div class="sticker-grid">
+        <img src="sticker1.png" alt="オリジナルステッカー 1" loading="lazy" />
+        <img src="sticker2.png" alt="オリジナルステッカー 2" loading="lazy" />
+        <img src="sticker3.png" alt="オリジナルステッカー 3" loading="lazy" />
+        <img src="sticker4.png" alt="オリジナルステッカー 4" loading="lazy" />
+        <img src="sticker5.png" alt="オリジナルステッカー 5" loading="lazy" />
+      </div>
+
+      <div class="credit-card">
+        <span class="credit-ic">🎨</span>
+        <div>
+          <p class="credit-name">ステッカーデザイン：<strong>根川泰斗 後援会長 作</strong></p>
+          <p class="credit-note">後援会長が想いを込めて手がけた、ここだけの特別なデザインです。</p>
+        </div>
+      </div>
+
+      <p style="font-size:13px;color:var(--muted);text-align:center;margin-top:16px;margin-bottom:0">
+        ※ 金額にかかわらず、応援いただいた皆さまへの感謝のしるしとしてお贈りします。
+      </p>
+    </section>
+
+    <!-- ===== 応援フォーム（記入ボタン）===== -->
+    <section>
+      <h2>応援フォームに記入する</h2>
+      <p>返礼品のお届けに必要です。ご記入のうえ送信すると、<strong>支払い方法のご案内</strong>が表示されます。</p>
+      <a class="btn btn-block" href="https://forms.gle/MwWWduUmN6wBxwne8" target="_blank" rel="noopener">
+        応援フォームに記入する →
+      </a>
+    </section>
+
+    <!-- ===== もっと知る・公式リンク ===== -->
+    <section>
+      <h2>もっと知る</h2>
+      <a class="btn-outline" href="https://www.youtube.com/@BTVRhoenrad" target="_blank" rel="noopener">
+        <span class="yt">▶</span>
+        <span>大会ライブ配信チャンネル<br><small style="font-weight:400;color:var(--muted)">YouTube「BTV Rhoenrad」</small></span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="btn-outline" href="https://www.rhoenrad.jp/activity-information/national-team2026/" target="_blank" rel="noopener">
+        <span style="font-size:18px">🇯🇵</span>
+        <span>ラート競技 日本代表選手団情報<br><small style="font-weight:400;color:var(--muted)">日本ラート協会 公式サイト</small></span>
+        <span class="arrow">→</span>
+      </a>
+    </section>
+
+  </div>
+
+  <footer>
+    応援、本当にありがとうございます。<br><br>
+    <strong>お問い合わせ</strong><br>
+    後援会　研修員代表　堀川晋太朗<br>
+    <a href="mailto:horikshint@open.ed.jp" style="color:var(--accent)">horikshint@open.ed.jp</a>
+  </footer>
+
+<script>
+  // ▼▼▼ 動画リスト（ここを増やせば3本以上のランダムにもできます）▼▼▼
+  // start は再生開始の秒数（指定しなければ最初から）
+  var videos = [
+    { id: "Ob2u4ipDeE0",
+      caption: "World Championships 2022 ｜ Men Spiral Finals（世界選手権2022 スパイラル決勝・5位入賞）" },
+    { id: "mWfkaKEjJK0", start: 465,
+      caption: "World Championships 2024 ｜ Men Semi Finals（世界選手権2024 準決勝・11位）" }
+  ];
+  // ▲▲▲ ここまで ▲▲▲
+
+  function pickVideo(){
+    var v = videos[Math.floor(Math.random() * videos.length)];
+    var url = "https://www.youtube.com/embed/" + v.id + "?autoplay=1&rel=0"
+            + (v.start ? "&start=" + v.start : "");
+    document.getElementById('ytFrame').src = url;
+    var cap = document.getElementById('videoCaption');
+    cap.textContent = "▶ " + v.caption;
+    cap.style.display = 'block';
+  }
+
+  function unlockVideo(){
+    pickVideo();
+    document.getElementById('lockedBox').style.display = 'none';
+    document.getElementById('videoEmbed').style.display = 'block';
+    document.getElementById('rerollBtn').style.display = 'inline-block';
+    document.getElementById('revealNote').style.display = 'block';
+    document.getElementById('videoEmbed').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+</script>
+</body>
+</html>
