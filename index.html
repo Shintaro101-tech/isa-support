@@ -153,6 +153,14 @@
   .credit-name{font-weight:700;font-size:15px;margin-bottom:4px}
   .credit-name strong{color:#ffd24a}
   .credit-note{font-size:13px;color:#cdd8ea;margin-bottom:0}
+  /* 受け渡し時期のお知らせ */
+  .ship-note{
+    display:flex;align-items:center;gap:10px;justify-content:center;
+    background:#fff7ed;border:1px solid #f3d9b3;border-radius:12px;
+    padding:13px 18px;margin:16px 0 0;font-size:13.5px;color:#7a5a2e;line-height:1.6;text-align:left;
+  }
+  .ship-note .ship-ic{font-size:18px;flex-shrink:0}
+  .ship-note strong{color:#b3741a}
 
   /* 写真 */
   .photo{width:100%;border-radius:16px;margin:6px 0 18px;border:1px solid var(--line)}
@@ -295,8 +303,11 @@
       </div>
 
       <p style="font-size:13px;color:var(--muted);text-align:center;margin-top:16px;margin-bottom:0">
-        ※ 金額にかかわらず、応援いただいた皆さまへの感謝のしるしとしてお贈りします。<br>
-        ※ お申込みのタイミングによっては、返礼品の受け渡しが大会後になる場合があります。予めご了承ください。
+        ※ 金額にかかわらず、応援いただいた皆さまへの感謝のしるしとしてお贈りします。
+      </p>
+      <p class="ship-note">
+        <span class="ship-ic">🕒</span>
+        <span>お申込みのタイミングによっては、返礼品のお渡しが<strong>大会後になる場合</strong>がございます。何卒ご了承ください。</span>
       </p>
     </section>
 
