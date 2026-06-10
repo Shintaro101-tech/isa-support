@@ -125,6 +125,15 @@
   .gift-title{font-size:19px;font-weight:700;line-height:1.6;margin-bottom:6px}
   .gift-title strong{color:var(--accent)}
   .gift-sub{font-size:14px;color:var(--muted);margin-bottom:0}
+  /* 応援コース */
+  .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+  .course{border:1px solid var(--line);border-radius:14px;padding:18px 16px;text-align:center;background:#fff}
+  .course.with{border-color:#ffd9df;background:#fff7f8}
+  .course.none{border-color:#cfe0f5;background:#f5f9ff}
+  .course-ic{font-size:30px;display:block;margin-bottom:6px}
+  .course-name{font-weight:700;font-size:15px;margin-bottom:6px;line-height:1.5}
+  .course-desc{font-size:13px;color:var(--muted);margin-bottom:0;line-height:1.6}
+  @media(max-width:420px){.course-grid{grid-template-columns:1fr}}
   /* ステッカーギャラリー */
   .sticker-lead{text-align:center;font-weight:700;color:var(--accent);font-size:15px;margin-bottom:14px}
   .sticker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
@@ -224,7 +233,7 @@
     <section>
       <h2>応援の流れ</h2>
       <ol class="steps">
-        <li>まず<strong>応援フォーム</strong>に記入（お名前など）</li>
+        <li>まず<strong>応援フォーム</strong>に記入（お名前・<strong>応援コースの選択</strong>など）</li>
         <li>送信後の画面に出る<strong>「支払いはこちら」</strong>から、<strong>PayPay または 銀行振込</strong>で支払い（<strong>一口1,000円〜・上限なし</strong>）</li>
         <li>後日、本人が返礼品を直接お届けします 🎁<br><span style="font-size:13px;color:var(--muted)">※ 返礼品の在庫数により、お渡しが遅れる場合がございます。予めご了承ください。</span></li>
       </ol>
@@ -243,9 +252,25 @@
       </div>
     </section>
 
-    <!-- ===== 返礼品 ===== -->
+    <!-- ===== 応援コース・返礼品 ===== -->
     <section>
-      <h2>返礼品</h2>
+      <h2>応援コース・返礼品</h2>
+      <p style="margin-bottom:14px;font-size:15px">応援は、フォームで次の<strong>2つのコース</strong>からお選びいただけます。</p>
+      <div class="course-grid">
+        <div class="course with">
+          <span class="course-ic">🎁</span>
+          <p class="course-name">ステッカー＆<br>クリアファイルコース</p>
+          <p class="course-desc">返礼品<strong>あり</strong><br>（下記のセットをお届け）</p>
+        </div>
+        <div class="course none">
+          <span class="course-ic">💪</span>
+          <p class="course-name">全力応援コース</p>
+          <p class="course-desc">返礼品<strong>なし</strong><br>応援の気持ちだけ届けたい方向け</p>
+        </div>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:24px">※ 返礼品には数に限りがあるため、品物が不要な方向けに「全力応援コース（返礼品なし）」もご用意しています。</p>
+
+      <p class="sticker-lead" style="margin-top:4px">🎁 ステッカー＆クリアファイルコースの返礼品</p>
       <div class="gift-hero">
         <span class="gift-emoji">🎁</span>
         <p class="gift-title">オリジナルステッカー <strong>5種セット</strong><br>＋ クリアファイル <strong>5枚</strong></p>
